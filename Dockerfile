@@ -11,7 +11,7 @@ RUN rpm --import http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-7
 # -----------------------------------------------------------------------------
 RUN echo $'[sensu] \n\
 name=sensu \n\
-baseurl=http://repositories.sensuapp.org/yum/$basearch/ \n\
+baseurl=https://sensu.global.ssl.fastly.net/yum/$releasever/$basearch/ \n\
 gpgcheck=0 \n\
 enabled=1' > /etc/yum.repos.d/sensu.repo && \
     yum update -y && \
